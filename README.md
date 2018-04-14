@@ -40,6 +40,7 @@ This will create a development instance located at http://localhost:4200. Then, 
 
 This will create a server instance located at http://localhost:8080.
 
+Once both scripts have finished running, the application can be accessed at http://localhost:4200.
 
 ### Production Build
 For Windows users, you must go to the file `root/package.json` and change the following line:
