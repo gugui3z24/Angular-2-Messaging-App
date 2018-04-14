@@ -1,0 +1,29 @@
+<div class="container">
+
+  <ul class="message-list-group">
+    <li class="message-list-item">
+      <button class="btn-primary" (click)="deleteMessage()">
+        <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete</button>
+      <button class="btn-success" (click)="changeReadStatus()">
+        <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Mark as Unread</button>
+      <button class="btn-info" (click)="reply()">
+        <i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Reply</button>
+    </li>
+    <li class="message-list-item">
+      <strong>From:</strong> {{ message.message_sender }}
+    </li>
+    <li class="message-list-item">
+      <strong>To:</strong> {{ message.message_recipient }}
+    </li>
+    <li class="message-list-item">
+      <strong>Date:</strong> {{ message.message_date_received | date:'M/d/yy, h:mm a' }}
+    </li>
+    <li class="message-list-item">
+      <strong>Subject:</strong> {{ message.message_subject }}
+    </li>
+    <li class="message-list-item">
+      <strong>Body:</strong> {{ message.message_body }}
+    </li>
+  </ul>
+
+</div>

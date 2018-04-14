@@ -1,0 +1,45 @@
+.sidebar-container {
+  background-color: #fafafa;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  @media screen and (max-width: 700px) {
+    width: 120px;
+  }
+}
+
+.list-group {
+  padding: 0;
+}
+
+.list-group-item {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  padding: 15px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.active {
+  background-color: #b2dfdb;
+  border: 1px solid #b2dfdb !important;
+}
+
+.active:hover {
+  background-color: #b2dfdb !important;
+}
+
+.list-group-item:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.badge {
+  color: #fff;
+  background-color: #2196f3;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  border-radius: 10rem;
+}

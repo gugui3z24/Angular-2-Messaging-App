@@ -1,0 +1,27 @@
+<nav class="navbar">
+
+  <div class="desktop-nav">
+    <ng-container *ngIf="isLoggedIn(); else notLoggedIn">
+      <a routerLink="/"><i class="fa fa-inbox" aria-hidden="true"></i>&nbsp;Inbox</a>
+      <a routerLink="/messaging/sent"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>&nbsp;Sent</a>
+      <a routerLink="/messaging/draft"><i class="fa fa-commenting" aria-hidden="true"></i>&nbsp;Drafts</a>
+      <a routerLink="/messaging/compose"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Compose</a>      
+      <a href="javascript:void(0)" (click)="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Logout</a>
+    </ng-container>
+
+  </div>
+
+  <ng-template #notLoggedIn>
+    <a routerLink="/register"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Register</a>
+    <a routerLink="/login"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Login</a>
+  </ng-template>
+
+  <div class="mobile-nav" (click)="openSideNav()">
+    <div class="hamburger">&nbsp;</div>
+    <div class="hamburger">&nbsp;</div>
+    <div class="hamburger">&nbsp;</div>
+  </div>
+
+</nav>
+
+<app-sidenav></app-sidenav>

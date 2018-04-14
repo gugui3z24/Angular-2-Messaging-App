@@ -1,0 +1,7 @@
+<ng-container *ngIf="alertDetails">
+  <div id="alert-box" class="alert-container">
+    <div [ngClass]="alertDetails.alertClass">
+      {{ alertDetails.alertMessage }}
+    </div>
+  </div>
+</ng-container>

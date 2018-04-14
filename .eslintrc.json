@@ -1,0 +1,18 @@
+{
+    "extends": "google",
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "rules": {
+        "object-curly-spacing": "off",
+        "max-len": "off",
+        "prefer-const": "error",
+        "no-const-assign": "error",
+        "new-cap": "off",
+        "require-jsdoc": "off",
+        "comma-dangle": "off",
+        "quote-props": "off",
+        "linebreak-style": "off",
+        "prefer-rest-params": "off"
+    }
+}

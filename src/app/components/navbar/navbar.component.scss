@@ -1,0 +1,63 @@
+@import '~styles.scss';
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #fafafa;
+    border-bottom: 2px solid $nav-liner;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+    @media screen and (max-width: 600px) {
+        padding: 0.7em;
+    }
+}
+
+.desktop-nav {
+  padding: 1px;
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+
+    a {
+        color: $nav-liner;
+        text-decoration: none;
+        font-size: 1rem;
+        padding-right: 20px;
+        text-transform: uppercase;
+    }
+
+    a:hover {
+      color: #d1c4e9;
+      transition: 0.5s;
+    }
+
+}
+
+a:hover {
+  color: green;
+}
+
+
+.mobile-nav {
+  border: 1px solid rgba(100, 100, 100, 0.3);
+  border-radius: 2px;
+  width: 40px;
+  @media screen and (min-width: 601px) {
+    display: none;
+  }
+}
+
+.hamburger {
+  background-color: $nav-liner;
+  height: 2px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}

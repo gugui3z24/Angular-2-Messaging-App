@@ -1,0 +1,24 @@
+<div class="flex-container">
+  <h1 class="page-header">Register</h1>
+
+  <div class="form-container">
+
+    <form (submit)="register(username, password)">
+      <div class="form-group" [ngClass]="{'danger' : (! registerUsername.valid &&  registerUsername.dirty), 'success' : ( registerUsername.valid)}">
+        <label for="username">Username</label>
+        <input [readonly]="processing" type="text" name="username" placeholder="Username" class="form-control" [(ngModel)]="username" #registerUsername="ngModel" maxlength="50" required>
+      </div>
+
+      <div class="form-group" [ngClass]="{'danger' : (!registerPassword.valid && registerPassword.dirty), 'success' : (registerPassword.valid)}">
+        <label for="username">Password</label>
+        <input [readonly]="processing" type="password" name="password" placeholder="Password" class="form-control" [(ngModel)]="password" #registerPassword="ngModel" maxlength="50" required>
+      </div>
+
+      <div class="form-group">
+        <button [disabled]="processing || !registerPassword.valid || ! registerUsername.valid" type="submit" class="btn-primary" name="button">Register</button>
+      </div>
+    </form>
+
+  </div>
+
+</div>

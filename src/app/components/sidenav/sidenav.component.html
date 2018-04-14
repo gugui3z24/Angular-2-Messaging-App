@@ -1,0 +1,33 @@
+<div class="side-nav" #sideNav>
+  <span class="close-btn" (click)="closeSideNav()">&times;</span>
+  <ng-container *ngIf="isLoggedIn(); else notLoggedIn">
+    <ul>
+      <li>
+        <a routerLink="/messaging/compose">Compose</a>
+      </li>
+      <li>
+        <a routerLink="/">Inbox</a>
+      </li>
+      <li>
+        <a routerLink="/messaging/sent">Sent</a>
+      </li>
+      <li>
+        <a routerLink="/messaging/draft">Drafts</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-template #notLoggedIn>
+    <ul>
+      <li>
+        <a routerLink="/login">Login</a>
+      </li>
+      <li>
+        <a routerLink="/register">Register</a>
+      </li>
+    </ul>
+  </ng-template>
+</div>

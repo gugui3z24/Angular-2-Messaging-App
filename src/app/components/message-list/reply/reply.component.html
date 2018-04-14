@@ -1,0 +1,33 @@
+<div class="flex-container">
+    <h1 class="page-header">Reply</h1>
+
+    <div class="form-container message-container">
+        <form (submit)="sendMessage(message.message_sender, message.message_subject, message.message_body, composeForm)" #composeForm="ngForm">
+
+            <div class="form-group" [ngClass]="{'danger' : (!username.valid && username.touched) || (!validRecipient), 'success' : (username.valid && validRecipient)}">
+                <label for="username">To:</label>
+                <input [readonly]="processing" type="text" name="username" placeholder="Recipient" class="form-control dropdown" #username="ngModel"
+                    [(ngModel)]="message.message_sender" maxlength="50" required autocomplete="off">
+            </div>
+
+            <div class="form-group" [ngClass]="{'danger' : (!subject.valid && subject.touched), 'success' : (subject.valid)}">
+                <label for="username">Subject:</label>
+                <input [readonly]="processing" type="text" name="password" placeholder="Subject" class="form-control" #subject="ngModel"
+                    [(ngModel)]="message.message_subject" maxlength="50" required>
+            </div>
+
+            <div class="form-group" [ngClass]="{'danger' : (!body.valid && body.touched), 'success' : (body.valid)}">
+                <textarea placeholder="Message Body" [readonly]="processing" #body="ngModel" [(ngModel)]="message.message_body" name="message"
+                    class="message-body form-control" required maxlength="500"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button [disabled]="processing || !username.valid || !subject.valid || !body.valid || !validRecipient" type="submit" class="btn-primary"
+                    name="button">Send</button>
+                <button (click)="saveDraft(message.message_sender, message.message_subject, message.message_body, composeForm)" [disabled]="processing || !username.valid || !subject.valid || !body.valid || !validRecipient"
+                    type="button" class="btn-success" name="button">Save Draft</button>
+            </div>
+
+        </form>
+    </div>
+</div>

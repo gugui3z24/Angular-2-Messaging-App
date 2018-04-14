@@ -1,0 +1,26 @@
+<div class="container">
+
+    <ul class="message-list-group">
+        <li class="message-list-item">
+            <button class="btn-primary" (click)="deleteMessage()">
+                <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete
+            </button>
+        </li>
+        <li class="message-list-item">
+            <strong>From:</strong> {{ message.sent_message_sender }}
+        </li>
+        <li class="message-list-item">
+            <strong>To:</strong> {{ message.sent_message_recipient }}
+        </li>
+        <li class="message-list-item">
+            <strong>Date:</strong> {{ message.sent_message_date_sent | date:'M/d/yy, h:mm a' }}
+        </li>
+        <li class="message-list-item">
+            <strong>Subject:</strong> {{ message.sent_message_subject }}
+        </li>
+        <li class="message-list-item">
+            <strong>Body:</strong> {{ message.sent_message_body }}
+        </li>
+    </ul>
+
+</div>

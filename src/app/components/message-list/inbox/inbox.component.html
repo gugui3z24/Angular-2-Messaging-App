@@ -1,0 +1,47 @@
+<div class="container">
+
+  <table class="vs-hidden">
+    <tr>
+      <th>From</th>
+      <th>Subject</th>
+      <th>Date</th>
+    </tr>
+    <ng-container *ngIf="messages">
+      <tr (click)="viewMessage(message)" class="table-row" *ngFor="let message of messages | sort" [style.font-weight]="message.message_read === 'false' ? 700 : 400">
+        <td>{{ message.message_sender }}</td>
+        <td>{{ message.message_subject }}</td>
+        <td>{{ message.message_date_received | date:'M/d/yy, h:mm a' }}</td>
+      </tr>
+    </ng-container>
+  </table>
+
+  <div class="vs-visible">
+    <h1 class="mobile-header">Inbox</h1>
+
+    <ul *ngIf="messages && messages.length === 0" class="message-list-group">
+      <li class="message-list-item">
+        <ul class="message-list-item-child">
+          <li class="message-liste-item-child">
+            No Messages
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="message-list-group">
+      <li (click)="viewMessage(message)" *ngFor="let message of messages | sort" class="message-list-item">
+        <strong>
+          <ng-container *ngIf="message.message_read === 'false'">*</ng-container>{{ message.message_sender }}</strong>
+        <ul class="message-list-item-child">
+          <li class="message-liste-item-child">
+            <em>{{ message.message_subject }}</em>
+          </li>
+          <li class="message-list-item-child">
+            {{ message.message_body }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</div>

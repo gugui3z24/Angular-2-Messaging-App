@@ -1,0 +1,22 @@
+<div class="sidebar-container vs-hidden">
+
+  <ul class="list-group">
+    <li [ngClass]="{'active': router.url === '/messaging/inbox'}" (click)="changeRoute('inbox');" class="list-group-item">
+      Inbox
+      <span class="badge">{{ inbox | async }}</span>
+    </li>
+    <li [ngClass]="{'active': router.url === '/messaging/sent'}" (click)="changeRoute('sent');" class="list-group-item">
+      Sent
+      <span class="badge">{{ sent | async }}</span>
+    </li>
+    <li [ngClass]="{'active': router.url === '/messaging/draft'}" (click)="changeRoute('draft');" class="list-group-item">
+      Drafts
+      <span class="badge">{{ draft | async }}</span>
+    </li>
+    <li class="list-group-item">
+      <button class="btn-warning" (click)="changeRoute('compose')">
+        <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;New Message</button>
+    </li>
+  </ul>
+
+</div>

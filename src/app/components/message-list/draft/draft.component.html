@@ -1,0 +1,44 @@
+<div class="container">
+
+    <table class="vs-hidden">
+        <tr>
+            <th>To</th>
+            <th>Subject</th>
+            <th>Date Created</th>
+        </tr>
+        <tr (click)="viewMessage(message)" class="table-row" *ngFor="let message of draftMessages | sort">
+            <td>{{ message.message_recipient }}</td>
+            <td>{{ message.message_subject }}</td>
+            <td>{{ message.message_date_received | date:'M/d/yy, h:mm a' }}</td>
+        </tr>
+    </table>
+
+    <div class="vs-visible">
+        <h1 class="mobile-header">Drafts</h1>
+
+        <ul *ngIf="draftMessages.length === 0" class="message-list-group">
+            <li class="message-list-item">
+                <ul class="message-list-item-child">
+                    <li class="message-liste-item-child">
+                        No Messages
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="message-list-group">
+            <li (click)="viewMessage(message)" *ngFor="let message of draftMessages | sort" class="message-list-item">
+                {{ message.message_sender }}
+                <ul class="message-list-item-child">
+                    <li class="message-liste-item-child">
+                        <em>{{ message.message_subject }}</em>
+                    </li>
+                    <li class="message-list-item-child">
+                        {{ message.message_body }}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</div>
