@@ -34,7 +34,7 @@ Before starting the app, you must have an active MySQL Connection running. To st
 
     $ ng serve
 
-This will create a development instance located at http://localhost:4200. Then, you must start the backend NodeJS server. In a separate terminal, run the following command in the root directory, run:
+This will create a development instance located at http://localhost:4200. Then, you must start the backend NodeJS server. In a separate terminal, run the following command in the root directory:
 
     $ node server/index.js
 
