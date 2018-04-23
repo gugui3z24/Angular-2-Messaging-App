@@ -1,7 +1,7 @@
 
 # Angular 2 Messaging Application
 
-Angular 2 Messaging App is an elegant web application built with Angular 2 Framework (Version 5), MySQL Database, and NodeJS/ExpressJS. Some application features include Web Sockets for real-time Server-Client communication, User Authentication and Authorization with JSON Web Tokens and MySQL Database Session Storage, Server-side Caching using Redis, Custom Angular Flash Messages (and all custom styling in application), and more! Users can send each other messages, save drafts, and trigger live updates when receiving new messages. This Web Application features a RESTful API built on NodeJS and ExpressJS. It is also optimized for both desktop and mobile devices. For a demo of this application, visit: https://angular2-msg-app-3z24.herokuapp.com
+Angular 2 Messaging App is an elegant web application built with Angular 2 Framework (Version 5), MySQL Database, and NodeJS/ExpressJS. Some application features include Web Sockets for real-time Server-Client communication, User Authentication and Authorization with JSON Web Tokens and MySQL Database Session Storage, Server-side Caching using Redis, Custom Angular Flash Messages (and all custom SASS/SCSS styling in application), and more! Users can send each other messages, save drafts, and trigger live updates when receiving new messages. This Web Application features a RESTful API built on NodeJS and ExpressJS. It is also optimized for both desktop and mobile devices. For a demo of this application, visit: https://angular2-msg-app-3z24.herokuapp.com
 
 ## Screenshots
 
